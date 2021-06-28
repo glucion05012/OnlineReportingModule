@@ -136,14 +136,6 @@
                   <p>CCOI</p>
                 </a>
               </li>
-
-              <li class="nav-item">
-                <a href="<?php echo base_url(); ?>ods" class="nav-link">
-                  <i class="fas fa-list-ul nav-icon"></i>
-                  <p>ODS</p>
-                </a>
-              </li>
-
               
             </ul>
           </li>
