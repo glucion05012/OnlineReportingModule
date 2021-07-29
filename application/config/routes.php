@@ -14,4 +14,10 @@ $route['pcl'] = 'Reportscontroller/pcl';
 $route['pmpin'] = 'Reportscontroller/pmpin';
 $route['ccor'] = 'Reportscontroller/ccor';
 $route['ccoi'] = 'Reportscontroller/ccoi';
+$route['odsir'] = 'Reportscontroller/odsir';
+$route['odsic'] = 'Reportscontroller/odsic';
+$route['odsr'] = 'Reportscontroller/odsr';
 
+
+// Casehandler
+$route['casehandler_summary'] = 'Casehandlercontroller/casehandler_summary';

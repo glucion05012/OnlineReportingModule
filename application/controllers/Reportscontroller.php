@@ -242,6 +242,95 @@
                 $this->load->view('templates/footer');
             }
         }
+
+        public function odsir(){
+            $this->form_validation->set_rules('from_date', 'Date',
+            'required');
+
+            if($this->form_validation->run() === FALSE){
+
+                $this->load->view('templates/header');
+                $this->load->view('templates/navbar');
+                $this->load->view('pages/opms/odsir');
+                $this->load->view('templates/footer');
+              
+            }else{
+                $from_date = $this->input->post('from_date');
+                $to_date = $this->input->post('to_date');
+                $region = $this->input->post('region');
+
+                $data['datefrom'] =  $from_date;
+                $data['dateto'] =  $to_date;
+
+                $data['odsir'] =  $this->opms_model->odsir($from_date, $to_date);
+                $data['region'] =  $this->opms_model->region();
+
+                $this->load->view('templates/header');
+                $this->load->view('templates/navbar');
+                $this->load->view('pages/opms/odsir', $data);
+                $this->load->view('templates/footer');
+            }
+        }
+
+        public function odsic(){
+            $this->form_validation->set_rules('from_date', 'Date',
+            'required');
+
+            if($this->form_validation->run() === FALSE){
+
+                $this->load->view('templates/header');
+                $this->load->view('templates/navbar');
+                $this->load->view('pages/opms/odsic');
+                $this->load->view('templates/footer');
+              
+            }else{
+                $from_date = $this->input->post('from_date');
+                $to_date = $this->input->post('to_date');
+                $region = $this->input->post('region');
+
+                $data['datefrom'] =  $from_date;
+                $data['dateto'] =  $to_date;
+
+                $data['odsic'] =  $this->opms_model->odsic($from_date, $to_date);
+                $data['region'] =  $this->opms_model->region();
+
+                $this->load->view('templates/header');
+                $this->load->view('templates/navbar');
+                $this->load->view('pages/opms/odsic', $data);
+                $this->load->view('templates/footer');
+            }
+        }
+
+        public function odsr(){
+            $this->form_validation->set_rules('from_date', 'Date',
+            'required');
+
+            if($this->form_validation->run() === FALSE){
+                $data['region'] =  $this->opms_model->region();
+
+                $this->load->view('templates/header');
+                $this->load->view('templates/navbar');
+                $this->load->view('pages/opms/odsr',$data);
+                $this->load->view('templates/footer');
+              
+            }else{
+                $from_date = $this->input->post('from_date');
+                $to_date = $this->input->post('to_date');
+                $region = $this->input->post('region');
+
+                $data['sregion'] =  $region;
+                $data['datefrom'] =  $from_date;
+                $data['dateto'] =  $to_date;
+
+                $data['odsr'] =  $this->opms_model->odsr($from_date, $to_date, $region);
+                $data['region'] =  $this->opms_model->region();
+
+                $this->load->view('templates/header');
+                $this->load->view('templates/navbar');
+                $this->load->view('pages/opms/odsr', $data);
+                $this->load->view('templates/footer');
+            }
+        }
         
     }
 ?>

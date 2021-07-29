@@ -136,6 +136,47 @@
                   <p>CCOI</p>
                 </a>
               </li>
+
+              <li class="nav-item">
+                <a href="<?php echo base_url(); ?>odsir" class="nav-link">
+                  <i class="fas fa-list-ul nav-icon"></i>
+                  <p>ODS-IR</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="<?php echo base_url(); ?>odsic" class="nav-link">
+                  <i class="fas fa-list-ul nav-icon"></i>
+                  <p>ODS-IC</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="<?php echo base_url(); ?>odsr" class="nav-link">
+                  <i class="fas fa-list-ul nav-icon"></i>
+                  <p>ODS-R</p>
+                </a>
+              </li>
+              
+            </ul>
+          </li>
+
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-list-alt"></i>
+              <p>
+                Monitoring
+                <i class="fas fa-angle-right right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+
+              <li class="nav-item">
+                <a href="<?php echo base_url(); ?>casehandler_summary" class="nav-link">
+                  <i class="fas fa-users nav-icon"></i>
+                  <p>Casehandler Summary</p>
+                </a>
+              </li>
               
             </ul>
           </li>
